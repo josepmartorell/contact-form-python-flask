@@ -14,8 +14,8 @@ csrf.init_app(app)
 
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = 'jetro4100@gmail.com'
-app.config['MAIL_PASSWORD'] = "ZXspectrum4100**'_"
+app.config['MAIL_USERNAME'] = 'yourID@xmail.com'
+app.config['MAIL_PASSWORD'] = "*****'_"
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 
@@ -52,7 +52,7 @@ def send_message(message):
     print(message.get('name'))
 
     msg = Message(message.get('subject'), sender=message.get('email'),
-                  recipients=['jetro4100@gmail.com'],
+                  recipients=['recipientID@xmail.com'],
                   body=message.get('message')
                   )
     mail.send(msg)
